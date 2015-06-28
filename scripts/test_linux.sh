@@ -69,6 +69,7 @@ function consoleinput(){
 function checkserverstatus(){
   while sleep 2; do
     consoleinput "HELLO_JORDAN"
+    consoleinput "status"
   done
 }
 touch "$REPO_DIR/srcds.log"
