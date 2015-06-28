@@ -75,7 +75,7 @@ touch "$REPO_DIR/srcds.log"
 checkserverstatus &
 CHECKSERVERSTATUS_PID=$!
 set +e
-timeout 90 grep -q '^Unknown command \"HELLO_JORDAN\"' <(tail -f "$REPO_DIR/srcds.log")
+timeout 180 grep -q '^Unknown command \"HELLO_JORDAN\"' <(tail -f "$REPO_DIR/srcds.log")
 SERVER_READY=$?
 kill -9 $CHECKSERVERSTATUS_PID 2>/dev/null
 # Suppress bash's kill notification
